@@ -1,0 +1,11 @@
+# Run when  OS CentOS
+- name: Centos version
+  debug: var=ansible_facts['distribution_major_version']
+
+- name: Install commmon packages
+  yum: name="{{ common_packages }}" state="present"
+  ignore_errors: yes
+  tags:
+    - common
+    - packages
+    - general

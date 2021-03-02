@@ -1,0 +1,20 @@
+# Run when  Debian
+- name: Found Debian version
+  debug:
+    msg: "Debian version {{ ansible_facts['distribution_major_version'] }}"
+
+- name: Upgrade all existed apt packages
+  apt: upgrade=dist force_apt_get=yes
+
+- name: Enable sudo for install packages
+  apt: name=sudo state=present
+  tags:
+    - common
+
+- name: Install commmon packages
+  apt: name="{{ common_packages }}" state=present
+  ignore_errors: yes
+  tags:
+    - common
+    - packages
+    - general

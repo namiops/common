@@ -1,0 +1,12 @@
+---
+# List of standard common packages
+common_packages:
+  - wget
+  - curl
+  - which
+  - jq
+  - tree
+  - git
+  - vim
+  - nano
+  - net-tools

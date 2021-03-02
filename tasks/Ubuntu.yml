@@ -1,0 +1,22 @@
+# Run when  OS is Ubuntu
+- name: Found Ubuntu version
+  debug:
+    msg: "Ubuntu version {{ ansible_facts['distribution_major_version'] }}"
+
+- name: Upgrade all existed apt packages
+  apt: upgrade=dist force_apt_get=yes
+
+- name: Enable sudo for installation
+  apt: name=sudo state=present
+  tags:
+    - common
+    - packages
+    - sudo
+
+- name: Install common packages
+  apt: name={{ common_packages }} state=present
+  ignore_errors: yes
+  tags:
+    - common
+    - packages
+    - general
