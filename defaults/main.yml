@@ -4,9 +4,10 @@ common_packages:
   - wget
   - curl
   - which
+  - locate
   - jq
   - tree
+  - tmux
   - git
-  - vim
+  - vim 
   - nano
-  - net-tools

@@ -1,21 +1,21 @@
 ---
 # List of standard common packages
-common_packages:
-  - wget
-  - curl
-  - which
-  - locate
-  - jq
-  - tree
-  - tmux
-  - git
-  - vim 
-  - nano
-  - net-tools
-  - ntp
-  - netcat
-  - netstat
-  - tcpdump
-  - lsof
-  - htop
-  - openssl
+#common_packages:
+#  - wget
+#  - curl
+#  - which
+#  - locate
+#  - jq
+#  - tree
+#  - tmux
+#  - git
+#  - vim 
+#  - nano
+#  - net-tools
+#  - ntp
+#  - netcat
+#  - netstat
+#  - tcpdump
+#  - lsof
+#  - htop
+#  - openssl

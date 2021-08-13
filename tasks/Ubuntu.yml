@@ -13,6 +13,9 @@
     - packages
     - sudo
 
+- name: List common_packages
+  debug: var=common_packages
+
 - name: Install common packages
   apt: name={{ common_packages }} state=present
   ignore_errors: yes

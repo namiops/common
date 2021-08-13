@@ -35,6 +35,9 @@ Installation
 
 Role Variables
 -------------
+By default package list including: wget, curl, which, locate, jq, tree, tmux, git, vim, nano
+
+Update the variable below to change the packages you want to install when you use this role
 * common_packages: []
 
 Supporting OS

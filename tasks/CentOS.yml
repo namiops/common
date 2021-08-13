@@ -2,6 +2,9 @@
 - name: Centos version
   debug: var=ansible_facts['distribution_major_version']
 
+- name: List common_packages
+  debug: var=common_packages
+
 - name: Install commmon packages
   yum: name="{{ common_packages }}" state="present"
   ignore_errors: yes

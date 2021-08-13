@@ -3,6 +3,9 @@
   debug:
     msg: "MacOs version {{ ansible_facts['distribution_major_version'] }}"
 
+- name: List common_packages
+  debug: var=common_packages
+
 - name: Brew install common packages
   homebrew: name={common_packages} state=present
   tags:
